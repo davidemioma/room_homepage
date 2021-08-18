@@ -12,4 +12,4 @@ function changeBg(){
   section.style.backgroundSize = 'cover';
 }
 
-setInterval(changeBg, 10000);
+setInterval(changeBg, 3000);
