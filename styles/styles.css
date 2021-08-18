@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Spartan";
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+.header {
+  background: url(../images/desktop-image-hero-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40rem;
+  position: relative;
+}
+
+.nav_bar {
+  padding: 5rem 3rem 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav_logo {
+  justify-self: center;
+}
+
+.nav_list {
+  display: none;
+  list-style: none;
+}
+
+.list_item > a {
+  text-decoration: none;
+  font-size: 1.8;
+  color: #fff;
+}
+
+.black {
+  background: hsl(0, 0%, 0%);
+  padding: 2rem 3rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .black {
+    display: none;
+  }
+
+  .nav_toggler {
+    display: none;
+  }
+
+  .nav_list {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .nav_logo {
+    justify-self: left;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav_bar {
+    padding-left: 8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding-bottom: 63rem;
+  }
+}
+
+.first {
+  position: relative;
+}
+
+.first_content {
+  padding: 10rem 2rem 10rem 2rem;
+}
+
+.first_content p {
+  line-height: 1.6;
+  color: hsl(0, 0%, 63%);
+  margin-bottom: 5rem;
+}
+
+.first_div {
+  display: flex;
+  gap: 4rem;
+}
+
+.first_div span {
+  letter-spacing: 10px;
+}
+
+.first_div img {
+  align-self: center;
+}
+
+.first .black {
+  left: 0;
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .first_content {
+    padding: 10rem 7rem 8rem 7rem;
+  }
+  .first .black {
+    display: flex;
+    gap: 5rem;
+    width: 150px;
+  }
+}
+
+.second {
+  background: url(../images/image-about-dark.jpg);
+}
+
+.fourth {
+  background: url(../images/image-about-light.jpg);
+}
+
+.second,
+.fourth {
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 1140px) {
+  .second,
+  .fourth {
+    height: 480px;
+  }
+}
+
+.third {
+  padding: 10rem 2rem 10rem 2rem;
+}
+
+.third h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.third p {
+  line-height: 1.6;
+  color: hsl(0, 0%, 63%);
+}
+
+.grid {
+  display: grid;
+}
+
+.grid_two {
+  display: grid;
+}
+
+@media screen and (min-width: 1440px) {
+  .third {
+    padding: 10rem 5rem;
+  }
+
+  .grid {
+    grid-template-columns: 60% 40%;
+  }
+
+  .grid_two {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
