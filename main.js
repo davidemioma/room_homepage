@@ -1,15 +1,21 @@
-function changeBg(){
-  const images = [
-    'url(./images/desktop-image-hero-1.jpg)',
-    'url(./images/desktop-image-hero-2.jpg)',
-    'url(./images/desktop-image-hero-3.jpg)'
-  ]
+"use strict";
 
-  const section = document.querySelector('header');
-  const bg = images[Math.floor(Math.random() * images.length)];
-  section.style.background = bg;
-  section.style.backgroundRepeat = 'no-repeat';
-  section.style.backgroundSize = 'cover';
+const previous = document.querySelector(".previous");
+const next = document.querySelector(".next");
+const slides = document.querySelectorAll(".hero");
+let i = 0;
+
+function nextSlides() {
+  slides[i].classList.add("hidden");
+  i = (i + 1) % slides.length;
+  slides[i].classList.remove("hidden");
 }
 
-setInterval(changeBg, 3000);
+function previousSlides() {
+  slides[i].classList.add("hidden");
+  i = (i - 1 + slides.length) % slides.length;
+  slides[i].classList.remove("hidden");
+}
+
+previous.addEventListener("click", previousSlides);
+next.addEventListener("click", nextSlides);
