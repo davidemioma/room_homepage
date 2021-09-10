@@ -2,6 +2,8 @@
 
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
+const previous1 = document.querySelector(".previous1");
+const next1 = document.querySelector(".next1");
 const slides = document.querySelectorAll(".hero");
 let i = 0;
 
@@ -19,3 +21,5 @@ function previousSlides() {
 
 previous.addEventListener("click", previousSlides);
 next.addEventListener("click", nextSlides);
+previous1.addEventListener("click", previousSlides);
+next1.addEventListener("click", nextSlides);
